@@ -11,6 +11,14 @@
   gap: 20px;
 }
 
+.sidebar svg {
+  width: 25px;
+}
+
+.logo-container svg {
+  width: 40px;
+}
+
 .logo-container,
 .actions-container *,
 .configs-container * {
