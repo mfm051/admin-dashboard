@@ -124,4 +124,47 @@
 .main {
   background-color: rgba(226, 232, 240, 255);
   box-shadow: 0 -2px 3px rgb(194, 193, 193);
+  padding: 20px 15px;
+  grid-template: 1fr 1fr / 2fr 1fr;
+  gap: 20px;
+}
+
+.projects-container {
+  grid-row: 1 / 3;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: max-content;
+  display: grid;
+  gap: 15px;
+}
+
+.projects-title {
+  grid-column: 1 / -1;
+  font-weight: 500;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 5px;
+  border-left: rgb(240, 180, 41) solid 5px;
+  box-shadow: 2px 2px 3px rgb(194, 193, 193);
+  padding: 20px 10px;
+  font-size: 0.7rem;
+  display: grid;
+  gap: 15px;
+}
+
+.project-card p:first-of-type {
+  font-weight: 700;
+}
+
+.project-card p:last-of-type {
+  color: rgb(100, 99, 99);
+}
+
+.project-actions {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  gap: 20px;
+  justify-self: end;
+  align-items: center;
 }
