@@ -2,7 +2,6 @@
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
-  --logo-width: 40px;
 }
 
 .wrapper {
@@ -12,10 +11,6 @@
   height: 100vh;
 }
 
-.wrapper > * {
-  display: grid;
-}
-
 .sidebar {
   background-color: #1992d4;
   color: white;
@@ -23,8 +18,10 @@
   padding: 15px;
   grid-column: 1 / span 1;
   grid-row: 1 / 3;
+  display: grid;
   grid-template-rows: repeat(3, max-content);
   gap: 50px;
+  --logo-width: 40px;
 }
 
 .sidebar * {
@@ -55,6 +52,7 @@
 
 .header {
   padding: 15px 30px;
+  display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: repeat(2, max-content);
   gap: 30px 15px;
@@ -92,6 +90,7 @@
 .user-presentation {
   grid-template-columns: max-content 1fr;
 }
+
 .presentation-text p {
   font-weight: 700;
 }
@@ -125,16 +124,14 @@
   background-color: rgba(226, 232, 240, 255);
   box-shadow: 0 -2px 3px rgb(194, 193, 193);
   padding: 20px 15px;
+  display: grid;
   grid-template: 1fr 1fr / 2fr 1fr;
   gap: 20px;
 }
 
-.main * {
-  display: grid;
-}
-
 .projects-container {
   grid-row: 1 / 3;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-auto-rows: max-content;
   gap: 15px;
@@ -146,22 +143,28 @@
   font-weight: 500;
 }
 
-.project-card {
+.card {
   background-color: white;
   border-radius: 5px;
-  border-left: rgb(240, 180, 41) solid 5px;
   box-shadow: 2px 2px 3px rgb(194, 193, 193);
   padding: 20px 10px;
   font-size: 0.7rem;
+  display: grid;
   gap: 15px;
 }
 
-.project-card p:first-of-type {
+.description-area h2 {
+  font-size: 0.8rem;
   font-weight: 700;
 }
 
-.project-card p:last-of-type {
+.description-area p {
+  font-size: 0.7rem;
   color: rgb(100, 99, 99);
+}
+
+.project {
+  border-left: rgb(240, 180, 41) solid 5px;
 }
 
 .project-actions {
@@ -173,33 +176,25 @@
 
 .announcements-container {
   grid-template-rows: max-content 1fr;
+  display: grid;
   gap: 15px;
 }
 
 .announcements {
-  background-color: white;
-  padding: 20px 10px 10px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 3px rgb(194, 193, 193);
-  gap: 20px;
+  padding: 30px 0 10px;
 }
 
-.announcement-card {
+.announcement-section {
   border-bottom: rgb(194, 193, 193) solid 1px;
   width: 80%;
   justify-self: center;
   padding-bottom: 15px;
-  font-size: 0.7rem;
 }
 
-.announcement-card:last-of-type {
+.announcement-section:last-of-type {
   border: none;
 }
 
-.announcement-card p:first-of-type {
-  font-weight: 700;
-}
-
-.announcement-card p:last-of-type {
-  color: rgb(100, 99, 99);
+.announcement-section .description-area * {
+  font-size: 0.7rem;
 }
